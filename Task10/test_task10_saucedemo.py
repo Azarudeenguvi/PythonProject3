@@ -1,5 +1,4 @@
-from argparse import Action
-from itertools import dropwhile
+
 
 import pytest
 from selenium import webdriver
