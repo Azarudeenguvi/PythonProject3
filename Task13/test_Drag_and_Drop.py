@@ -35,7 +35,7 @@ def test_negative_case():
         driver.get("https://jqueryui.com/droppable/")
         # Switch to iframe
         driver.switch_to.frame(driver.find_element(By.TAG_NAME, "iframe"))
-        drag = driver.find_element(By.XPATH, '//div[contains(@class,"ui-widget-content ui-draggable")]')
+        drag = driver.find_element(By.XPATH, '//div[contains(@class,"ui-widget-content ui-draggable")]').is_displayed()
         drop = driver.find_element(By.XPATH, '//div[contains(@class,"ui-widget-header ui-droppable")]')
         actions = ActionChains(driver)
         actions.drag_and_drop_by_offset(source=drag,xoffset=342,yoffset=140).perform()
